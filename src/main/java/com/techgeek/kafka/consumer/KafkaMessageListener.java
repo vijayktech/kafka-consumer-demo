@@ -9,33 +9,33 @@ import org.springframework.stereotype.Service;
 public class KafkaMessageListener {
 
     Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
-    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
+    @KafkaListener(topics="techgeek-topic2", groupId = "geek-cons-grp-4")
     public String consumer1(String message){
         log.info("consumer1 consumed message {}", message);
         return "successfully consumed";
     }
 
-    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
+    @KafkaListener(topics="techgeek-topic2", groupId = "geek-cons-grp-4")
     public String consumer2(String message){
         log.info("consumer2 consumed message {}", message);
         return "successfully consumed";
     }
 
-    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
+    @KafkaListener(topics="techgeek-topic2", groupId = "geek-cons-grp-4")
     public String consumer3(String message){
         log.info("consumer3 consumed message {}", message);
         return "successfully consumed";
     }
 
-    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
+    @KafkaListener(topics="techgeek-topic2", groupId = "geek-cons-grp-4")
     public String consumer4(String message){
         log.info("consumer4 consumed message {}", message);
         return "successfully consumed";
     }
 
-    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
-    public String consumer5(String message){
-        log.info("consumer5 consumed message {}", message);
-        return "successfully consumed";
-    }
+//    @KafkaListener(topics="techgeek-topic", groupId = "geek-cons-grp-4")
+//    public String consumer5(String message){
+//        log.info("consumer5 consumed message {}", message);
+//        return "successfully consumed";
+//    }
 }
